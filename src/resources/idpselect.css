@@ -1,11 +1,72 @@
+body {
+    text-align: center;
+    font-family: 'Open Sans';
+    background-color: #C8DBE5;
+}
+    
+#loginArea {
+    width: 35%;
+    min-width: 400px;
+    max-width: 500px;
+    border: 4px #5F584E solid;
+    margin: 10px auto;
+    box-shadow: 0.2em 0.2em 0.4em #dddddd;
+    padding: 5px 20px;
+    background-color: #ffffff;
+}    
+
+#footer {
+    width: 35%;
+    min-width: 416px;
+    max-width: 566px;
+    color: #ffffff;
+    padding: 10px;
+    background-color: #5F584E; 
+    margin: 0 auto 20px auto;
+}
+
+#footer a {
+    color: white;
+}
+
+@media (max-width: 400px) {
+    #loginArea {
+        margin: 0px auto;
+        width: 80%;
+        min-width: 0;
+    }
+
+    #footer {
+        margin: 10px auto 0px auto;
+        width: 80%;
+        min-width: 0;
+    }
+}
+
+select {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    color: #fff;
+    background: #5F584E;
+    padding: 5px;
+    border-radius: 0px;
+    margin: 15px;
+}
+
+select:focus {
+    outline-width: 0;
+}
 /* Top level is idpSelectIdPSelector */
 #idpSelectIdPSelector
 {
-    width: 389px;
-    text-align: left;
-    background-color: #FFFFFF;
-    border: 2px #A40000 solid;
-    padding: 10px;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  text-shadow: 0.1em 0.1em 0.2em #dddddd;
+  color: #F57F21; /* official GENI orange */
 }
 
 /* Next down are the idpSelectPreferredIdPTile, idpSelectIdPEntryTile & idpSelectIdPListTile */
@@ -14,26 +75,26 @@
  * The preferred IdP tile (if present) has a specified height, so
  * we can fit the preselected * IdPs in there
  */
-#idpSelectPreferredIdPTile
+/*#idpSelectPreferredIdPTile
 {
-    height:138px; /* Force the height so that the  selector box
+    height:138px;  Force the height so that the  selector box
                    * goes below when there is only one preslect 
-                   */
+                   
 }
+
 #idpSelectPreferredIdPTileNoImg
 {
     height:60px;
 }
-
+*/
 /***
  *  The preselect buttons
  */
 div.IdPSelectPreferredIdPButton
 {
-    margin: 3px;
-    width: 120px;  /* Make absolute because 3 of these must fit inside 
+    width: 100px;  /* Make absolute because 3 of these must fit inside 
                       div.IdPSelect{width} with not much each side. */
-    float: left;
+    margin: 20px auto;
 }
 
 /*
@@ -41,23 +102,13 @@ div.IdPSelectPreferredIdPButton
  */
 div.IdPSelectPreferredIdPButton a
 {
-    float: left;
-    width: 99%; /* Need a specified width otherwise we'll fit
-                   the contents which we don't want because
-                   they have auto margins */
-    
-}
-div.IdPSelectTextDiv{
-    height: 3.5ex; /* Add some height to separate the text from the boxes */
-    font-size: 15px;
-    clear: left;
+    display: block;
+    width: 100%; 
 }
 
-div.IdPSelectPreferredIdPImg
-{
-/*  max-width: 95%; */
-    height: 69px; /* We need the absolute height to force all buttons to the same size */
-    margin: 2px;
+div.IdPSelectTextDiv{
+    font-size: 15px;
+    vertical-align: bottom;
 }
 
 img.IdPSelectIdPImg {
@@ -66,15 +117,9 @@ img.IdPSelectIdPImg {
 
 div.IdPSelectPreferredIdPButton img
 {
-    display: block;    /* Block display to allow auto centring */
-    max-width:  114px; /* Specify max to allow scaling, percent does work */
-    max-height: 64px;  /* Specify max to allow scaling, percent doesn't work */
-    margin-top: 3px ;
-    margin-bottom: 3px ;
-    border: solid 0px #000000;  /* Strip any embellishments the brower may give us */
-    margin-left: auto; /* Auto centring */
-    margin-right: auto;  /* Auto centring */
-
+    display: block;
+    width: 100%;
+    border: solid 0px #000000;
 }
 
 div.IdPSelectPreferredIdPButton div.IdPSelectTextDiv
@@ -83,10 +128,6 @@ div.IdPSelectPreferredIdPButton div.IdPSelectTextDiv
     font-size: 12px;
     font-weight: normal;
     max-width: 95%;
-    height: 30px;       /* Specify max height to allow two lines.  The 
-                         * Javascript controlls the max length of the
-                         * strings 
-                         */
 }
 
 /*
@@ -95,26 +136,34 @@ div.IdPSelectPreferredIdPButton div.IdPSelectTextDiv
 #idpSelectInput, #idpSelectSelector
 {
     width: 80%;
+    margin: 10px;
 }
-/*
- * For some reason a <select> width includes the border and an
- * <input> doesn't hence we have to force a margin onto the <select>
- */
-#idpSelectSelector
-{
-    margin-left: 2px;
-    margin-right: 2px;
 
+@keyframes raise {
+    from {box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);}
+    to {box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);}
 }
+
 #idpSelectSelectButton, #idpSelectListButton
 {
-    margin-left: 5px;
-    width: 16%;
+  padding: 5px 10px;
+  border: none;
+  background-color: #FB8C00;
+  color: #ffffff !important;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 10px;
+  vertical-align: middle;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
 }
-#idpSelectSelectButton
-{
-    padding-left: 2px;
-    padding-right: 2px;
+
+#idpSelectSelectButton:hover, #idpSelectListButton:hover {
+  background-color: #FF9800;
+  animation: raise;
+  animation-duration: .2s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);  
 }
 
 /*
@@ -135,8 +184,6 @@ div.IdPSelectPreferredIdPButton div.IdPSelectTextDiv
     text-decoration: underline;
 }
 
-
-
 /* 
  * Arrange to have the dropdown/list aref on the left and the 
  * help button on the right 
@@ -146,13 +193,6 @@ a.IdPSelectDropDownToggle
 {
     display: inline-block;
     width: 80%;
-}
-
-a.IdPSelectHelpButton
-{
-    display: inline-block;
-    text-align: right;
-    width: 20%;
 }
 
 /**
