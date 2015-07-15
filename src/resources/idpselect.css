@@ -1,65 +1,62 @@
 body {
-    text-align: center;
-    font-family: 'Open Sans';
-    background-color: #C8DBE5;
+  text-align: center;
+  font-family: 'Open Sans';
+  background-color: #BBDEFB;
 }
     
 #loginArea {
-    width: 35%;
-    min-width: 400px;
-    max-width: 500px;
-    border: 4px #5F584E solid;
-    margin: 10px auto;
-    box-shadow: 0.2em 0.2em 0.4em #dddddd;
-    padding: 5px 20px;
-    background-color: #ffffff;
+  width: 30%;
+  min-width: 400px;
+  max-width: 500px;
+  margin: 30px auto;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding: 20px;
+  background-color: #ffffff;
 }    
 
 #footer {
-    width: 35%;
-    min-width: 416px;
-    max-width: 566px;
-    color: #ffffff;
-    padding: 10px;
-    background-color: #5F584E; 
-    margin: 0 auto 20px auto;
+  width: 30%;
+  min-width: 400px;
+  max-width: 500px;
+  color: #ffffff;
+  padding: 20px;
+  background-color: #616161; 
+  margin: 0 auto 20px auto;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 #footer a {
-    color: white;
+  color: white; 
 }
 
 @media (max-width: 400px) {
-    #loginArea {
-        margin: 0px auto;
-        width: 80%;
-        min-width: 0;
-    }
+  #loginArea {
+    margin: 0px auto;
+    width: 80%;
+    min-width: 0;
+  }
 
-    #footer {
-        margin: 10px auto 0px auto;
-        width: 80%;
-        min-width: 0;
-    }
+  #footer {
+    margin: 10px auto 0px auto;
+    width: 80%;
+    min-width: 0;
+  }
 }
 
 select {
-    font-family: 'Open Sans';
-    font-size: 14px;
-    color: #fff;
-    background: #5F584E;
-    padding: 5px;
-    border-radius: 0px;
-    margin: 15px;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  margin: 15px;
 }
 
 select:focus {
-    outline-width: 0;
+  outline: none;
 }
+
 /* Top level is idpSelectIdPSelector */
 #idpSelectIdPSelector
 {
-    text-align: center;
+  text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -153,7 +150,7 @@ div.IdPSelectPreferredIdPButton div.IdPSelectTextDiv
   font-family: inherit;
   font-size: 15px;
   cursor: pointer;
-  margin: 10px;
+  margin: 15px;
   vertical-align: middle;
   outline: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
@@ -184,16 +181,6 @@ div.IdPSelectPreferredIdPButton div.IdPSelectTextDiv
     text-decoration: underline;
 }
 
-/* 
- * Arrange to have the dropdown/list aref on the left and the 
- * help button on the right 
- */
-
-a.IdPSelectDropDownToggle
-{
-    display: inline-block;
-    width: 80%;
-}
 
 /**
  * Drop down (incremental search) stuff - see the associated javascript for reference
