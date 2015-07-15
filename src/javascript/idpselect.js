@@ -937,6 +937,7 @@ function IdPSelectUI() {
             return false;
         };
         idpListDiv.appendChild(a);
+        idpListDiv.appendChild(document.createElement('br'));
         buildHelpText(idpListDiv);
 
         parentDiv.appendChild(idpListDiv);
