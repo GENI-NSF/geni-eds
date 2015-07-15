@@ -813,6 +813,7 @@ function IdPSelectUI() {
 
         var button = buildContinueButton('Select');
         button.disabled = true;
+        form.appendChild(document.createElement('br'));
         form.appendChild(button);
         
         form.onsubmit = function () {
@@ -844,6 +845,8 @@ function IdPSelectUI() {
             return false;
         };
         idpEntryDiv.appendChild(a);
+        idpEntryDiv.appendChild(document.createElement('br'));
+
         buildHelpText(idpEntryDiv);
                                               
         parentDiv.appendChild(idpEntryDiv);
