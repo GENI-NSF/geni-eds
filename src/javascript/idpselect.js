@@ -845,7 +845,7 @@ function IdPSelectUI() {
             return false;
         };
         idpEntryDiv.appendChild(a);
-        idpEntryDiv.appendChild(document.createElement('br'));
+        idpEntryDiv.appendChild(document.createTextNode(' | '));
 
         buildHelpText(idpEntryDiv);
                                               
@@ -937,7 +937,7 @@ function IdPSelectUI() {
             return false;
         };
         idpListDiv.appendChild(a);
-        idpListDiv.appendChild(document.createElement('br'));
+        idpListDiv.appendChild(document.createTextNode(' | '));
         buildHelpText(idpListDiv);
 
         parentDiv.appendChild(idpListDiv);
