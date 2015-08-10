@@ -5,3 +5,11 @@ was reverse-engineered from the Makefile. The starting point was version 1.1.0 o
 Shibboleth Embedded Discovery Service.
 
 The original is available as [doc/README.txt](doc/README.txt)
+
+To install on a GENI Portal host:
+
+```
+tar zxf shibboleth-embedded-ds-1.1.0.tar.gz
+cd shibboleth-embedded-ds-1.1.0
+sudo cp *.css *.js *.html *.gif *.png /var/www/eds
+```
