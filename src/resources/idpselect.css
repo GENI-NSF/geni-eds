@@ -177,6 +177,7 @@ ul.IdPSelectDropDown {
     border: 1px solid black;
     z-index: 6;
     position: absolute;   
+    margin-top: 0px;
 }
 
 ul.IdPSelectDropDown li {
