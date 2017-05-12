@@ -9,7 +9,7 @@ The original is available as [doc/README.txt](doc/README.txt)
 To install on a GENI Portal host:
 
 ```
-tar zxf shibboleth-embedded-ds-1.1.0.tar.gz
-cd shibboleth-embedded-ds-1.1.0
+tar zxf shibboleth-embedded-ds-1.1.0-geni.5.tar.gz
+cd shibboleth-embedded-ds-1.1.0-geni.5
 sudo cp *.css *.js *.html *.gif *.png /var/www/eds
 ```
